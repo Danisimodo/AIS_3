@@ -1,6 +1,6 @@
 def dfs(graph, start, len, visited=None):
     try:
-        if visited is None:  
+        if visited is None:  #проверка посещена ли вершина
             visited = set()  
         visited.add(start)   
     except Exception as e:
@@ -10,7 +10,7 @@ def dfs(graph, start, len, visited=None):
     print (start)
     print("Length is ", len)
 
-    for next in graph[start] - visited:
+    for next in graph[start] - visited: #для посещения вершин
         dfs(graph, next, len+1, visited)
 
     return visited
