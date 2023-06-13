@@ -1,8 +1,14 @@
 def dfs(graph, start, len, visited=None):
     try:
+<<<<<<< HEAD
+        if visited is None:  #проверка посещена ли вершина
+            visited = set() #посетил1
+        visited.add(start)   #создал2
+=======
         if visited is None:  #проверка посещена ли вершина!
             visited = set()  #???
         visited.add(start)   
+>>>>>>> main
     except Exception as e:
         print ("Node is not valid" + start) #непон!
         raise e
